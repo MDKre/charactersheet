@@ -8,7 +8,7 @@
 
         <div class = "container">
             <br>
-            <input type = "number" id = "playerLevel" name = "playerLevel" placeholder= "10">
+            <input type = "number" name = "playerLevel" placeholder= "10" onchange = "populateAttributes()" id = "playerLevel">
 
         <label for = "playerLevel">Level</label>
         </div>
@@ -23,50 +23,50 @@
 
                 <tr>
                     <td>Strength</td>
-                    <td><input type = "number" id = "strengthScore"></td>
+                    <td><input type = "number" onchange = "generateStrengthMod()" id = "strengthScore"></td>
                     <td><input type = "number", id = "strengthModifier"></td>
                 </tr>
 
                 <tr>
                     <td>Charisma</td>
-                    <td><input type = "number" id = "CharismaScore"></td>
-                    <td><input type = "number", id = "CharismaModifier"></td>
+                    <td><input type = "number" onchange = "generateCharismaMod()" id = "charismaScore"></td>
+                    <td><input type = "number", id = "charismaMod"></td>
                 </tr>
 
                 <tr>
                     <td>Intelligence</td>
-                    <td><input type = "number" id = "intelligenceScore"></td>
-                    <td><input type = "number", id = "intelligenceModifier"></td>
+                    <td><input type = "number" onchange = "generateIntelligenceMod()" id = "intelligenceScore"></td>
+                    <td><input type = "number", id = "intelligenceMod"></td>
                 </tr>
 
                 <tr>
                     <td>Willpower</td>
-                    <td><input type = "number" id = "willpowerScore"></td>
-                    <td><input type = "number", id = "willpowerModifier"></td>
+                    <td><input type = "number" onchange = "generateWillpowerMod()" id = "willpowerScore"></td>
+                    <td><input type = "number", id = "willpowerMod"></td>
                 </tr>
 
                 <tr>
                     <td>Perception</td>
-                    <td><input type = "number" id = "perceptionScore"></td>
-                    <td><input type = "number", id = "perceptionModifier"></td>
+                    <td><input type = "number" onchange = "generatePerceptionMod()" id = "perceptionScore"></td>
+                    <td><input type = "number", id = "perceptionMod"></td>
                 </tr>
 
                 <tr>
                     <td>Movement</td>
-                    <td><input type = "number" id = "movementScore"></td>
-                    <td><input type = "number", id = "movementModifer"></td>
+                    <td><input type = "number" onchange = "generateMovementMod()" id = "movementScore"></td>
+                    <td><input type = "number", id = "movementMod"></td>
                 </tr>
 
                 <tr>
                     <td>Finesse</td>
-                    <td><input type = "number" id = "finesseScore"></td>
-                    <td><input type = "number", id = "finesseModifier"></td>
+                    <td><input type = "number" onchange = "generateFinesseMod()" id = "finesseScore"></td>
+                    <td><input type = "number", id = "finesseMod"></td>
                 </tr>
 
                 <tr>
                     <td>Constitution</td>
-                    <td><input type = "number" id = "constitutionScore"></td>
-                    <td><input type = "number", id = "constitutionModifier"></td>
+                    <td><input type = "number" onchange = "generateConstitutionMod()" id = "constitutionScore"></td>
+                    <td><input type = "number", id = "constitutionMod"></td>
                 </tr>
 
                 <script src = "script.js"></script>

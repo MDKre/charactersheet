@@ -1,22 +1,67 @@
+const target = parseInt(document.getElementById("playerLevel").value);
 const range = 0.5;
+const upperLevelLimit = Math.round(target + target * range);
+const lowerLevelLimit = Math.round(target - target * range);
 
-function generateAttribute(target) // Generates a number within range of target. Range 0.5 => 50% deviation from target
+function generateStrengthMod()
 {
-    const upperLevelLimit = target + target*range;    // Adds the range to the global level to get the upper limit. lvl 10 + 5 => lvl 15 upper limit
-
-    const lowerLevelLimit = target - target*range;    // Subtracts the range from the global level to the get lower limit. lvl 10 - 5 => lvl 5 lower limit    
-
-    return Math.round(Math.random() * (upperLevelLimit - lowerLevelLimit) + lowerLevelLimit);
+    let x = parseInt(document.getElementById("strengthScore").value);
+    x = Math.round(Math.floor((x-10)/2));
+    document.getElementById("strengthModifier").value = x;
 }
 
-let attributeLevel = generateAttribute(10);  // Calls the generateLevelWithinRange function 
-
-function generateModifer(attributeLevel)    // Generates the modifier
+function generateCharismaMod()
 {
-    return Math.round(Math.floor((attributeLevel-10)/2));
+    let x = parseInt(document.getElementById("charismaScore").value);
+    x = Math.round(Math.floor((x-10)/2));
+    document.getElementById("charismaMod").value = x;
 }
 
-let modifier = generateModifer(attributeLevel);    // Calls the generateModifier function
+function generateIntelligenceMod()
+{
+    let x = parseInt(document.getElementById("intelligenceScore").value);
+    x = Math.round(Math.floor((x-10)/2));
+    document.getElementById("intelligenceMod").value = x;
+}
 
-console.log(attributeLevel);
-console.log(modifier);
+function generateWillpowerMod()
+{
+    let x = parseInt(document.getElementById("willpowerScore").value);
+    x = Math.round(Math.floor((x-10)/2));
+    document.getElementById("willpowerMod").value = x;
+}
+
+function generatePerceptionMod()
+{
+    let x = parseInt(document.getElementById("perceptionScore").value);
+    x = Math.round(Math.floor((x-10)/2));
+    document.getElementById("perceptionMod").value = x;
+}
+
+function generateMovementMod()
+{
+    let x = parseInt(document.getElementById("movementScore").value);
+    x = Math.round(Math.floor((x-10)/2));
+    document.getElementById("movementModifer").value = x;
+}
+
+function generateMovementMod()
+{
+    let x = parseInt(document.getElementById("movementScore").value);
+    x = Math.round(Math.floor((x-10)/2));
+    document.getElementById("movementMod").value = x;
+}
+
+function generateFinesseMod()
+{
+    let x = parseInt(document.getElementById("finesseScore").value);
+    x = Math.round(Math.floor((x-10)/2));
+    document.getElementById("finesseMod").value = x;
+}
+
+function generateConstitutionMod()
+{
+    let x = parseInt(document.getElementById("constitutionScore").value);
+    x = Math.round(Math.floor((x-10)/2));
+    document.getElementById("constitutionMod").value = x;
+}
