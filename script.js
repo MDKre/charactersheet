@@ -20,5 +20,3 @@ let modifier = generateModifer(attributeLevel);    // Calls the generateModifier
 
 console.log(attributeLevel);
 console.log(modifier);
-
-// I'm testing Git
