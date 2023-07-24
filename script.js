@@ -3,6 +3,37 @@ const range = 0.5;
 const upperLevelLimit = Math.round(target + target * range);
 const lowerLevelLimit = Math.round(target - target * range);
 
+function generateRandomLevel(targetLevel)
+{
+    const target = targetLevel; // The target around which the random levels are generated
+    const range = 0.5;  // 0.5 => 50% deviation from target and so on
+    const upperLevelLimit = Math.round(target + target * range);    // Target + 50% deviation
+    const lowerLevelLimit = Math.round(target - target * range);    // Target - 50% deviation
+    let x = parseInt(Math.random() * (upperLevelLimit - lowerLevelLimit) + lowerLevelLimit);    // Generate Level within 50% of target
+    return x;
+}
+
+function populateAttributes()
+{
+    document.getElementById("strengthScore").value = generateRandomLevel(document.getElementById("playerLevel").valueAsNumber);
+    document.getElementById("charismaScore").value = generateRandomLevel(document.getElementById("playerLevel").valueAsNumber);
+    document.getElementById("intelligenceScore").value = generateRandomLevel(document.getElementById("playerLevel").valueAsNumber);
+    document.getElementById("willpowerScore").value = generateRandomLevel(document.getElementById("playerLevel").valueAsNumber);
+    document.getElementById("perceptionScore").value = generateRandomLevel(document.getElementById("playerLevel").valueAsNumber);
+    document.getElementById("movementScore").value = generateRandomLevel(document.getElementById("playerLevel").valueAsNumber);
+    document.getElementById("finesseScore").value = generateRandomLevel(document.getElementById("playerLevel").valueAsNumber);
+    document.getElementById("constitutionScore").value = generateRandomLevel(document.getElementById("playerLevel").valueAsNumber);
+
+    generateStrengthMod();
+    generateCharismaMod();
+    generateIntelligenceMod();
+    generateWillpowerMod();
+    generatePerceptionMod();
+    generateMovementMod();
+    generateFinesseMod();
+    generateConstitutionMod();
+}
+
 function generateStrengthMod()
 {
     let x = parseInt(document.getElementById("strengthScore").value);
